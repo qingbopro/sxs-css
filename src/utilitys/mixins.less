@@ -1,0 +1,49 @@
+.shuipingjuzhong(@w) {
+    position: absolute;
+    left: 50%;
+    margin-left: unit(-@w / 2,px);
+}
+
+.chuizhijuzhong(@h) {
+    position: absolute;
+    top: 50%;
+    margin-top: unit(-@h / 2,px);
+}
+
+.shuipingchuizhijuzhong(@w,@h) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: unit(-@w / 2,px);
+    margin-top: unit(-@h / 2,px);
+}
+
+.danhangyichu() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.duohangchaihang() {
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.danhangbuchaihang(){
+    white-space: nowrap;
+}
+
+
+.baifenbaibeijingtu(@src) {
+    background: url(@src) no-repeat;
+    background-size: 100% 100%;
+}
+
+.clearfix(){
+    &:after{
+        clear: both;
+        content: " ";
+        display: table;
+    }
+}

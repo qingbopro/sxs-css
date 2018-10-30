@@ -1,0 +1,31 @@
+@tr-background-color: #FCFCFC;
+@thead-background-color: #F1F1F1;
+
+@{table} {
+    width: 100%;
+    border-top: 1px solid @grey-light;
+    border-left: 1px solid @grey-light;
+    border-right: 1px solid @grey-light;
+    line-height: 45px;
+    thead, .thead {
+        height: 46px;
+        background-color: @thead-background-color !important;
+    }
+    th, td {
+        text-align: center;
+    }
+    tr, .tr {
+        border-bottom: 1px solid @grey-light;
+    }
+    .tr:nth-child(odd) {
+        background-color: @tr-background-color;
+    }
+    tr:nth-child(even) {
+        background-color: @tr-background-color;
+    }
+    .tr {
+        .clearfix;
+        width: 100%;
+        text-align: center;
+    }
+}

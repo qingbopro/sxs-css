@@ -1,0 +1,63 @@
+.generate-font-size(@i: 1, @n) when (@i =< @n) {
+    .font-@{i} {
+        font-size: unit(@i,px) !important;
+    }
+    .generate-font-size((@i + 2), @n);
+}
+
+.generate-button(@c){
+    &.@{c}{
+        border-color: @@c;
+        background-color: @@c;
+        color: @white;
+        &:hover{
+            background-color: @@c;
+            color: @white;
+        }
+    }
+    &.@{c}@{border}{
+        border-color: @@c;
+        background-color: @white;
+        color: @@c;
+        &:hover{
+            background-color: @@c;
+            color: @white;
+        }
+    }
+}
+
+.generate-button(@c) when(@c = yellow){
+    &.@{c}{
+        border-color: @@c;
+        background-color: @@c;
+        color: @black;
+        &:hover{
+            background-color: @@c;
+            color: @black;
+        }
+    }
+    &.@{c}@{border}{
+        border-color: @@c;
+        background-color: @white;
+        color: @black;
+        &:hover{
+            background-color: @@c;
+            color: @black;
+        }
+    }
+}
+
+.generate-col(@i: 1, @n) when (@i =< @n) {
+    .col-@{i}{
+        width: unit(100 / @i,%);
+        float: left;
+    }
+    .generate-col((@i + 1), @n);
+}
+
+.generate-tag(@c){
+    &.@{c}{
+        border-color: @@c;
+        color: @@c;
+    }
+}

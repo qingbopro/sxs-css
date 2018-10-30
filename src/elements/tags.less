@@ -1,0 +1,54 @@
+@{tag}{
+    // default
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid @grey-dark;
+    .danhangbuchaihang;
+    .unselectable;
+    cursor: default;
+    color: @grey-dark;
+    vertical-align: top;
+
+    // behavior
+
+
+    // size
+    &@{small}{
+        height: 20px;
+        line-height: 18px;
+        padding: 0 8px;
+    }
+    &@{normal}{
+        height: 30px;
+        line-height: 28px;
+        padding: 0 10px;
+    }
+    &@{medium}{
+        height: 36px;
+        line-height: 34px;
+        padding: 0 15px;
+    }
+    &@{big}{
+        height: 40px;
+        line-height: 38px;
+        padding: 0 20px;
+    }
+    &@{large}{
+        height: 48px;
+        line-height: 46px;
+        padding: 0 25px;
+    }
+
+
+    // colors
+    .generate-tag(red);
+    .generate-tag(orange);
+    .generate-tag(yellow);
+    .generate-tag(green);
+    .generate-tag(blue);
+    .generate-tag(indigo);
+    .generate-tag(purple);
+}

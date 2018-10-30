@@ -1,0 +1,59 @@
+@{redpack}{
+    position: relative;
+    display: inline-block;
+    width: 276px;
+    height: 108px;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding: 20px 15px 0;
+    color: #fff;
+    .baifenbaibeijingtu('@{img-path}/redpack.png');
+    cursor: pointer;
+    overflow: hidden;
+    .amount{
+        font-size: 30px;
+        position: absolute;
+        top: 11px;
+        right: 16px;
+        color: @white;
+    }
+    i{
+        font-size: 18px;
+        display: inline-block;
+        margin-top: 11px;
+        margin-left: 2px;
+        vertical-align: top;
+        color: @white;
+    }
+    p{
+        color: @white;
+        .duohangchaihang;
+        font-size: 12px;
+    }
+
+    // status
+    &@{disabled}{
+        background-image: url("@{img-path}/redpack-disabled.png");
+        cursor: not-allowed;
+        p{
+            color: @grey;
+        }
+        .amount{
+            color: @grey;
+        }
+        i{
+            color: @grey;
+        }
+    }
+    &.received{
+        &:after{
+            position: absolute;
+            top: 8px;
+            right: 56px;
+            width: 55px;
+            height: 55px;
+            content: "";
+            .baifenbaibeijingtu('@{img-path}/received.png')
+        }
+    }
+}
